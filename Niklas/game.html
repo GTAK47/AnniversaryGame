@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Artefaktkammer</title>
+    <meta
+      name="description"
+      content="Das interaktive Spiel mit Levels, Artefakten und verschlüsselten Buchstaben."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.__assetVersion = String(Date.now());
+      document.write(
+        `<link rel="stylesheet" href="styles.css?v=${window.__assetVersion}" />`,
+      );
+    </script>
+  </head>
+  <body class="page page-game" id="top">
+    <div class="page-sparkles page-sparkles-game" aria-hidden="true"></div>
+    <div class="game-aurora game-aurora-left" aria-hidden="true"></div>
+    <div class="game-aurora game-aurora-right" aria-hidden="true"></div>
+
+    <header class="game-topbar reveal">
+      <a class="topbar-link" href="explanation.html" data-nav>Zur Erklärung</a>
+
+      <div class="game-brand">
+        <p class="eyebrow">anniversary time</p>
+        <h1>The Game</h1>
+      </div>
+
+      <button class="text-button" type="button" data-reset-progress>
+        Fortschritt resetten
+      </button>
+    </header>
+
+    <main class="game-shell" data-game-root>
+      <section class="game-main-column">
+        <article class="game-visual-card reveal" data-stage-card>
+          <div class="stage-photo-frame">
+            <img
+              class="stage-photo"
+              data-level-image
+              src="assets/photos/IMG_0873.JPG"
+              alt=""
+            />
+
+            <div class="stage-photo-overlay"></div>
+
+            <div class="stage-photo-copy">
+              <div class="stage-photo-badges">
+                <span class="stage-badge" data-level-chapter>Level 1</span>
+              </div>
+
+              <div class="stage-photo-text">
+                <p class="stage-kicker" data-level-kicker>Sanfter Start</p>
+                <h2 data-level-title>Das erste Artefakt</h2>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="quest-card reveal" data-quest-card>
+          <div class="quest-header">
+            <div>
+              <p class="eyebrow eyebrow-soft">question time</p>
+              <h2 data-quest-title>Das erste Artefakt</h2>
+            </div>
+
+            <div class="quest-progress-card">
+              <span class="quest-progress-value" data-progress-count>0/9</span>
+              <span class="quest-progress-label">Artefakte gesichert</span>
+            </div>
+          </div>
+
+          <div class="progress-bar-shell" aria-label="Spielfortschritt">
+            <div class="progress-bar-fill" data-progress-fill></div>
+          </div>
+
+          <div class="quest-copy">
+            <p class="quest-prompt" data-level-prompt>
+              Lade die erste Frage ...
+            </p>
+            <p class="quest-helper" data-level-helper>
+              Ein kleiner Hinweis erscheint hier.
+            </p>
+          </div>
+
+          <div class="quest-state" data-state-panel>
+            <form class="answer-form" data-answer-form novalidate>
+              <label class="field-label" data-answer-label for="dynamic-answer">
+                Deine Antwort
+              </label>
+
+              <div class="answer-shell">
+                <div class="answer-input-region" data-answer-input-region></div>
+                <button
+                  class="primary-button primary-button--compact"
+                  type="submit"
+                  data-submit-answer
+                >
+                  Artefakt freischalten
+                </button>
+              </div>
+            </form>
+
+            <div class="quest-actions">
+              <button class="ghost-button" type="button" data-show-hint>
+                Hinweis zeigen
+              </button>
+              <button class="ghost-button" type="button" data-view-artifact>
+                Artefakt ansehen
+              </button>
+            </div>
+
+            <div class="hint-card" data-hint-card hidden>
+              <p class="hint-card-label">Hinweis</p>
+              <p class="hint-card-copy" data-hint-copy></p>
+            </div>
+
+            <div class="feedback-bubble" data-feedback hidden></div>
+          </div>
+        </article>
+      </section>
+
+      <aside class="game-side-column">
+        <section class="inventory-panel reveal">
+          <div class="panel-heading">
+            <p class="eyebrow eyebrow-soft">inventar</p>
+            <h2>Artfakte</h2>
+          </div>
+
+          <div class="artifact-grid" data-artifact-grid></div>
+        </section>
+
+        <section class="levels-panel reveal">
+          <div class="panel-heading">
+            <p class="eyebrow eyebrow-soft">level auswahl</p>
+            <h2>Die 9 Kapitel</h2>
+          </div>
+
+          <div class="level-list" data-level-list></div>
+        </section>
+      </aside>
+    </main>
+
+    <section class="finale-shell reveal" data-finale-shell hidden>
+      <div class="finale-intro-card">
+        <p class="eyebrow eyebrow-soft">schlüsselkammer</p>
+        <h2 data-finale-heading>Du hast gewonnen</h2>
+        <p class="finale-intro-copy" data-finale-copy>
+          Du hast dein Geschenk freigeschaltet, aber das Reiseziel ist noch verschlüsselt.
+        </p>
+
+        <div class="finale-reveal-strip">
+          <article class="finale-reveal-card">
+            <span class="finale-reveal-label">Ziel</span>
+            <strong class="finale-reveal-value" data-finale-prize>
+              Eine gemeinsame Reise
+            </strong>
+          </article>
+          <article class="finale-reveal-card">
+            <span class="finale-reveal-label">Reiseziel</span>
+            <strong class="finale-reveal-value" data-finale-destination>
+              Verschlüsselt
+            </strong>
+          </article>
+        </div>
+
+        <div class="finale-key-pill">
+          <span class="finale-key-label">Schlüssel</span>
+          <span class="finale-key-value finale-key-value--empty" data-cipher-key>?</span>
+          <span class="finale-key-note">Ich kann dir sagen wo er ist</span>
+        </div>
+      </div>
+
+      <div class="cipher-board">
+        <div class="cipher-grid" data-cipher-grid></div>
+
+        <form class="finale-key-form" data-key-form novalidate>
+          <label class="field-label" for="cipher-key-input">Schlüsselzahl eingeben</label>
+          <div class="answer-shell finale-answer-shell" data-key-shell>
+            <div class="answer-input-region">
+              <input
+                class="answer-input"
+                id="cipher-key-input"
+                type="number"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="Schlüssel"
+                data-key-input
+              />
+            </div>
+            <button
+              class="secondary-button"
+              type="submit"
+              data-submit-key
+            >
+              Schlüssel pruefen
+            </button>
+          </div>
+        </form>
+
+        <div class="cipher-status">
+          <p class="cipher-status-label">Entschlüsselung</p>
+          <p class="cipher-status-copy" data-cipher-status>
+            Deine 9 Buchstaben warten auf den Schlüssel.
+          </p>
+        </div>
+
+        <div class="cipher-actions">
+          <button
+            class="primary-button primary-button--compact"
+            type="button"
+            data-run-decrypt
+          >
+            Schlüssel einsetzen
+          </button>
+          <button
+            class="secondary-button"
+            type="button"
+            data-open-gift
+            hidden
+          >
+            Geschenk abholen
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="artifact-modal" data-artifact-modal hidden>
+      <div class="artifact-modal-backdrop" data-close-modal></div>
+
+      <div
+        class="artifact-modal-panel"
+        data-artifact-modal-panel
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="artifact-modal-title"
+      >
+        <button
+          class="artifact-modal-close"
+          type="button"
+          aria-label="Fenster schliessen"
+          data-close-modal
+        >
+          ×
+        </button>
+        <div class="artifact-modal-layout">
+          <div class="reward-showcase">
+            <div class="reward-photo-stage">
+              <img
+                class="reward-photo"
+                data-modal-image
+                src="assets/photos/IMG_0873.JPG"
+                alt=""
+              />
+              <div class="reward-photo-overlay"></div>
+              <span class="reward-chapter-pill" data-modal-chapter>Level 1</span>
+
+              <div class="reward-letter-medallion">
+                <span class="reward-letter-label">Buchstabe</span>
+                <span class="reward-artifact-letter" data-modal-letter>M</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="artifact-modal-content">
+            <p class="eyebrow eyebrow-soft">artefakt gesichert</p>
+            <h2 id="artifact-modal-title" data-modal-title>Artefakt geborgen</h2>
+            <p class="artifact-modal-copy" data-modal-copy>
+              Ein neuer verschlüsselter Buchstabe wartet auf dich.
+            </p>
+            <p class="reward-artifact-note" data-modal-artifact-note>
+              Der erste verschlüsselte Buchstabe ist jetzt in deinem Inventar.
+            </p>
+
+            <div class="artifact-modal-actions">
+              <button class="secondary-button" type="button" data-close-modal>
+                Weiter ansehen
+              </button>
+              <button
+                class="primary-button primary-button--compact"
+                type="button"
+                data-advance-level
+              >
+                Naechstes Kapitel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gift-reveal-modal" data-gift-modal hidden>
+      <div class="gift-reveal-backdrop" data-close-gift></div>
+
+      <div class="gift-reveal-panel" role="dialog" aria-modal="true" aria-labelledby="gift-title">
+        <button
+          class="gift-reveal-close"
+          type="button"
+          aria-label="Geschenkfenster schliessen"
+          data-close-gift
+        >
+          ×
+        </button>
+
+        <div class="gift-reveal-visual">
+          <img
+            class="gift-reveal-image"
+            src="assets/ui/barcelona-reveal.png"
+            alt="Traumhafte Barcelona-Szene bei Sonnenuntergang"
+          />
+          <div class="gift-reveal-overlay"></div>
+          <div class="gift-celebration" aria-hidden="true"></div>
+        </div>
+
+        <div class="gift-reveal-content">
+          <p class="eyebrow">super win unlocked</p>
+          <p class="gift-reveal-kicker">Geschenk freigeschaltet</p>
+          <h2 id="gift-title" data-gift-heading>Barcelona</h2>
+          <p class="gift-reveal-subheading" data-gift-subheading>
+            Euer Jahrestagsgeschenk ist eine gemeinsame Reise.
+          </p>
+          <p class="gift-reveal-copy" data-gift-copy>
+            Du hast alle 9 Buchstaben gefunden, den Schlüssel eingesetzt und das
+            Ziel geknackt. Das Geschenk ist eine Reise fuer euch beide nach
+            Barcelona.
+          </p>
+
+          <div class="gift-reveal-ticket">
+            <span class="ticket-label">destination</span>
+            <span class="ticket-destination">BARCELONA</span>
+            <span class="ticket-note">Pack die Koffer. Das Abenteuer wartet.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.write(
+        `<script src="game-data.js?v=${window.__assetVersion}"><\/script>`,
+      );
+      document.write(
+        `<script src="script.js?v=${window.__assetVersion}"><\/script>`,
+      );
+    </script>
+  </body>
+</html>

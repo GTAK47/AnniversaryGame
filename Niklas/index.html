@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Unser kleines Abenteuer</title>
+    <meta
+      name="description"
+      content="Ein filmischer Startscreen fuer ein romantisches Puzzle-Abenteuer."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.__assetVersion = String(Date.now());
+      document.write(
+        `<link rel="stylesheet" href="styles.css?v=${window.__assetVersion}" />`,
+      );
+    </script>
+  </head>
+  <body class="page page-home page-home-video" id="top">
+    <div class="intro-orb intro-orb-left" aria-hidden="true"></div>
+    <div class="intro-orb intro-orb-right" aria-hidden="true"></div>
+
+    <div class="intro-video-shell" aria-hidden="true">
+      <video
+        class="intro-video"
+        data-intro-video
+        preload="auto"
+        playsinline
+        webkit-playsinline="true"
+        muted
+        disablepictureinpicture
+      >
+        <source src="assets/video/fahrstuhl.mp4" type="video/mp4" />
+      </video>
+      <img class="intro-video-poster" data-intro-poster alt="" hidden />
+      <div class="intro-video-vignette"></div>
+    </div>
+
+    <main class="intro-home-shell">
+      <section class="intro-stage-shell" aria-label="Intro">
+        <div class="intro-invitation-card">
+          <div class="intro-action-cluster">
+            <button class="intro-go-button" type="button" data-start-intro>
+              <span>I am J</span>
+            </button>
+          </div>
+      
+          <section class="intro-finale-shell" data-intro-finale aria-hidden="true">
+            <p class="intro-finale-eyebrow">Happy Anniversary</p>
+            <a class="intro-enter-button" href="explanation.html" data-nav data-enter-game>
+              Start 
+            </a>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.write(
+        `<script src="script.js?v=${window.__assetVersion}"><\/script>`,
+      );
+    </script>
+  </body>
+</html>
