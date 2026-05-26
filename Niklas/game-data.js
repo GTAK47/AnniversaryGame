@@ -186,7 +186,7 @@ window.ANNIVERSARY_GAME = {
         {
           prompt: "Errate, welches Tier ich bin.",
           helper:
-            "Merkmale:\n1. Ich bin ein Wiederkäür.\n2. Ich ernähre mich hauptsächlich von Gras, Heu und Silage.\n3. Ich produziere eine Flüssigkeit, die du nicht verträgst.",
+            "Merkmale:\n1. Ich bin ein Wiederkäuer.\n2. Ich ernähre mich hauptsächlich von Gras, Heu und Silage.\n3. Ich produziere eine Flüssigkeit, die du nicht verträgst.",
           hint: "Die Antwort muht dich praktisch schon an.",
           answerInput: {
             type: "text",
@@ -221,7 +221,7 @@ window.ANNIVERSARY_GAME = {
       kicker: "DM Time Capsule",
       title: "First Text",
       description:
-        "Dieses Kapitel testet Erinnerung statt Intuition. Es geht um den genaün Moment, an dem alles angefangen hat.",
+        "Dieses Kapitel testet Erinnerung statt Intuition. Es geht um den genauen Moment, an dem alles angefangen hat.",
       status: "playable",
       image: {
         src: "assets/photos/IMG_0875.JPG",
@@ -481,7 +481,7 @@ window.ANNIVERSARY_GAME = {
         {
           prompt:
             "Wo habe ich dich gefragt, ob du meine Freundin werden möchtest?",
-          helper: "Gesucht ist das Bundesland, nicht die genaü Stadt oder der genaü Ort.",
+          helper: "Gesucht ist das Bundesland, nicht die genaue Stadt oder der genaue Ort.",
           hint: "Da gibt es auch paar Kühe",
           answerInput: {
             type: "text",
