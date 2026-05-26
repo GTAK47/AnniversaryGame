@@ -105,7 +105,7 @@ window.ANNIVERSARY_GAME = {
       steps: [
         {
           prompt:
-            "Wenn man die Tage, die wir zusammen sind, addiert und anschliessend mit unserem Alter summiert, welche Zahl kommt dann raus?",
+            "Anzahl der Tage die ein Jahr hat minus der Summe unserer beiden Geburtstage die wir bis jetzt im Leben hatten? ",
           helper:
             "Rechenaufgabe, also kein Taschenrechner.\nGib nur die Zahl ein.",
           hint: "Das erste Ergebnis ist eine dreistellige Zahl.",
